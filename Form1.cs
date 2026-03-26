@@ -88,7 +88,25 @@ namespace SimpleCalculator
 
         private void btnCE_Click(object sender, EventArgs e)
         {
-            txtDisplay.Clear();   // 현재 입력값만 삭제
+            txtDisplay.Clear(); // 아래 값 삭제
+
+            string expr = txtExpression.Text.Trim();
+
+            if (string.IsNullOrEmpty(expr))
+                return;
+
+            // 공백 기준으로 나누기
+            string[] parts = expr.Split(' ');
+
+            // 마지막 요소 제거
+            if (parts.Length > 1)
+            {
+                txtExpression.Text = string.Join(" ", parts, 0, parts.Length - 1);
+            }
+            else
+            {
+                txtExpression.Clear();
+            }
         }
     }
 }
