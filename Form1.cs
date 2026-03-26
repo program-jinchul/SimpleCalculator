@@ -59,9 +59,14 @@ namespace SimpleCalculator
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtDisplay.Clear();
-            num1 = 0;
-            op = "";
+            txtDisplay.Clear();   // 현재 입력값 삭제
+            num1 = 0;             // 저장된 첫 번째 숫자 초기화
+            op = "";              // 연산자 초기화
+        }
+
+        private void btnCE_Click(object sender, EventArgs e)
+        {
+            txtDisplay.Clear();   // 현재 입력값만 삭제
         }
     }
 }

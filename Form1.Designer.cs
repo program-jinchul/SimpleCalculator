@@ -49,9 +49,9 @@
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
-            button3 = new Button();
+            btnDel = new Button();
             btnClear = new Button();
-            button1 = new Button();
+            btnCE = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -110,9 +110,9 @@
             tableLayoutPanel1.Controls.Add(button6, 1, 1);
             tableLayoutPanel1.Controls.Add(button5, 0, 1);
             tableLayoutPanel1.Controls.Add(button4, 3, 0);
-            tableLayoutPanel1.Controls.Add(button3, 2, 0);
+            tableLayoutPanel1.Controls.Add(btnDel, 2, 0);
             tableLayoutPanel1.Controls.Add(btnClear, 1, 0);
-            tableLayoutPanel1.Controls.Add(button1, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnCE, 0, 0);
             tableLayoutPanel1.Location = new Point(153, 260);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 5;
@@ -310,16 +310,16 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += btnPlus_Click;
             // 
-            // button3
+            // btnDel
             // 
-            button3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button3.Location = new Point(269, 3);
-            button3.Name = "button3";
-            button3.Size = new Size(127, 89);
-            button3.TabIndex = 2;
-            button3.Text = "del";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btnDel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnDel.Location = new Point(269, 3);
+            btnDel.Name = "btnDel";
+            btnDel.Size = new Size(127, 89);
+            btnDel.TabIndex = 2;
+            btnDel.Text = "del";
+            btnDel.UseVisualStyleBackColor = true;
+            btnDel.Click += button3_Click;
             // 
             // btnClear
             // 
@@ -332,15 +332,16 @@
             btnClear.UseVisualStyleBackColor = true;
             btnClear.Click += btnClear_Click;
             // 
-            // button1
+            // btnCE
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button1.Location = new Point(3, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(127, 89);
-            button1.TabIndex = 0;
-            button1.Text = "CE";
-            button1.UseVisualStyleBackColor = true;
+            btnCE.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnCE.Location = new Point(3, 3);
+            btnCE.Name = "btnCE";
+            btnCE.Size = new Size(127, 89);
+            btnCE.TabIndex = 0;
+            btnCE.Text = "CE";
+            btnCE.UseVisualStyleBackColor = true;
+            btnCE.Click += btnCE_Click;
             // 
             // Form1
             // 
@@ -382,8 +383,8 @@
         private Button button6;
         private Button button5;
         private Button button4;
-        private Button button3;
+        private Button btnDel;
         private Button btnClear;
-        private Button button1;
+        private Button btnCE;
     }
 }
