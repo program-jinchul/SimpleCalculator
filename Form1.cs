@@ -16,7 +16,11 @@ namespace SimpleCalculator
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            if (txtDisplay.Text.Length > 0) // 글자가 있을 때만 실행
+            {
+                txtDisplay.Text = txtDisplay.Text.Substring(0, txtDisplay.Text.Length - 1);
+                // 마지막 글자 하나 제거
+            }
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
